@@ -141,29 +141,26 @@ A few things I reach for before anyone says the word "optimize":
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=tkctwasd&show_icons=true&hide_border=true&include_all_commits=true&count_private=true&bg_color=0d1117&title_color=a78bfa&icon_color=ec4899&text_color=c9d1d9" />
-  <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.vercel.app/api?username=tkctwasd&show_icons=true&hide_border=true&include_all_commits=true&count_private=true&title_color=6d28d9&icon_color=db2777&text_color=334155" />
-  <img height="165" alt="GitHub stats" src="https://github-readme-stats.vercel.app/api?username=tkctwasd&show_icons=true&hide_border=true&include_all_commits=true&count_private=true" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/tkctwasd/tkctwasd/main/assets/generated/stats-dark.svg" />
+  <img height="214" alt="Profile stats" src="https://raw.githubusercontent.com/tkctwasd/tkctwasd/main/assets/generated/stats-light.svg" />
 </picture>
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=tkctwasd&layout=compact&hide_border=true&langs_count=8&bg_color=0d1117&title_color=a78bfa&text_color=c9d1d9" />
-  <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=tkctwasd&layout=compact&hide_border=true&langs_count=8&title_color=6d28d9&text_color=334155" />
-  <img height="165" alt="Top languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=tkctwasd&layout=compact&hide_border=true&langs_count=8" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/tkctwasd/tkctwasd/main/assets/generated/langs-dark.svg" />
+  <img height="214" alt="Top languages" src="https://raw.githubusercontent.com/tkctwasd/tkctwasd/main/assets/generated/langs-light.svg" />
 </picture>
 
 <br/>
 
-<img alt="Streak" src="https://streak-stats.demolab.com?user=tkctwasd&hide_border=true&background=0D1117&stroke=a78bfa&ring=ec4899&fire=ec4899&currStreakLabel=a78bfa&sideLabels=c9d1d9&dates=8b949e" />
-
-<br/>
-
-<img width="96%" alt="Contribution activity" src="https://github-readme-activity-graph.vercel.app/graph?username=tkctwasd&bg_color=0d1117&color=a78bfa&line=ec4899&point=ffffff&area=true&area_color=6366f1&hide_border=true" />
-
-<br/>
-
-<img alt="Trophies" src="https://github-profile-trophy.vercel.app/?username=tkctwasd&theme=radical&no-frame=true&no-bg=true&margin-w=6&row=1&column=6" />
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/tkctwasd/tkctwasd/main/assets/generated/graph-dark.svg" />
+  <img alt="Contribution graph" src="https://raw.githubusercontent.com/tkctwasd/tkctwasd/main/assets/generated/graph-light.svg" />
+</picture>
 
 </div>
+
+> Rendered daily by [`.github/workflows/stats.yml`](.github/workflows/stats.yml) straight from the
+> GitHub GraphQL API into [`assets/generated/`](assets/generated/) — self-hosted, so there is no
+> third-party service left to go dark. The images 404 until that workflow has run once.
 
 ---
 
