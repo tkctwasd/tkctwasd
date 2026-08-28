@@ -37,6 +37,7 @@
   <nav class="nav__links" aria-label="Sections">
     <a href="#about"    data-en="About"     data-vi="Giới thiệu">About</a>
     <a href="#skills"   data-en="Skills"    data-vi="Kỹ năng">Skills</a>
+    <a href="#demo"     data-en="Demo"      data-vi="Demo">Demo</a>
     <a href="#work"     data-en="Work"      data-vi="Dự án">Work</a>
     <a href="#playbook" data-en="Playbook"  data-vi="Kinh nghiệm">Playbook</a>
     <a href="#contact"  data-en="Contact"   data-vi="Liên hệ">Contact</a>
@@ -80,7 +81,7 @@
 
       <div class="hero__cta reveal">
         <a class="btn btn--primary magnetic" href="#work" data-en="See the work" data-vi="Xem dự án">See the work</a>
-        <a class="btn magnetic" href="mailto:dongnm@wasdmobile.com" data-en="Get in touch" data-vi="Liên hệ">Get in touch</a>
+        <a class="btn magnetic" href="mailto:mindongun123@gmail.com" data-en="Get in touch" data-vi="Liên hệ">Get in touch</a>
         <a class="btn btn--ghost magnetic" href="https://github.com/tkctwasd" target="_blank" rel="noopener">GitHub ↗</a>
       </div>
 
@@ -153,40 +154,137 @@
   <section class="section" id="skills">
     <div class="section__head reveal">
       <span class="tag">02</span>
-      <h2 data-en="Skills" data-vi="Kỹ năng">Skills</h2>
+      <h2 data-en="What I cover" data-vi="Phạm vi làm được">What I cover</h2>
     </div>
+    <p class="section__lede reveal"
+       data-en="Six domains, all of them touched in shipped work rather than tutorials. The point isn't the list — it's that a decision in one column is usually a decision in another."
+       data-vi="Sáu miền, tất cả đều đã làm trong sản phẩm thật chứ không phải qua tutorial. Điều đáng nói không nằm ở danh sách — mà ở chỗ một quyết định trong cột này thường là quyết định của cột kia.">
+      Six domains, all of them touched in shipped work.
+    </p>
 
-    <div class="skills">
-      <div class="skills__bars reveal">
-        <div class="bar" data-level="92"><span class="bar__name">Unity / C#</span><span class="bar__val">92</span><i></i></div>
-        <div class="bar" data-level="85"><span class="bar__name">Rendering &amp; HLSL</span><span class="bar__val">85</span><i></i></div>
-        <div class="bar" data-level="88"><span class="bar__name">Performance &amp; profiling</span><span class="bar__val">88</span><i></i></div>
-        <div class="bar" data-level="78"><span class="bar__name">Burst / Jobs / DOTS</span><span class="bar__val">78</span><i></i></div>
-        <div class="bar" data-level="72"><span class="bar__name">Python tooling</span><span class="bar__val">72</span><i></i></div>
-        <div class="bar" data-level="68"><span class="bar__name">Luau / Roblox</span><span class="bar__val">68</span><i></i></div>
+    <div class="matrix">
+      <article class="dom tilt reveal">
+        <div class="dom__head"><span class="dom__ico">◆</span><h3 data-en="Gameplay" data-vi="Gameplay">Gameplay</h3></div>
+        <ul class="dom__list">
+          <li data-en="Physics &amp; colliders" data-vi="Physics &amp; collider">Physics &amp; colliders</li>
+          <li data-en="Animator &amp; state machines" data-vi="Animator &amp; state machine">Animator &amp; state machines</li>
+          <li data-en="Particles / VFX" data-vi="Particle / VFX">Particles / VFX</li>
+          <li data-en="Canvas &amp; responsive UI" data-vi="Canvas &amp; UI đa độ phân giải">Canvas &amp; responsive UI</li>
+          <li>Input System</li>
+          <li data-en="Scene &amp; prefab architecture" data-vi="Kiến trúc scene &amp; prefab">Scene &amp; prefab architecture</li>
+        </ul>
+      </article>
+
+      <article class="dom tilt reveal">
+        <div class="dom__head"><span class="dom__ico">◈</span><h3 data-en="Rendering &amp; shaders" data-vi="Rendering &amp; shader">Rendering &amp; shaders</h3></div>
+        <ul class="dom__list">
+          <li>URP</li>
+          <li>GPU instancing</li>
+          <li>SRP Batcher</li>
+          <li data-en="HLSL &amp; Shader Graph" data-vi="HLSL &amp; Shader Graph">HLSL &amp; Shader Graph</li>
+          <li>Material property blocks</li>
+          <li data-en="Overdraw &amp; transparency budget" data-vi="Ngân sách overdraw &amp; transparency">Overdraw &amp; transparency budget</li>
+        </ul>
+      </article>
+
+      <article class="dom tilt reveal">
+        <div class="dom__head"><span class="dom__ico">⚡</span><h3 data-en="Performance &amp; DOTS" data-vi="Hiệu năng &amp; DOTS">Performance &amp; DOTS</h3></div>
+        <ul class="dom__list">
+          <li data-en="Profiler &amp; Frame Debugger" data-vi="Profiler &amp; Frame Debugger">Profiler &amp; Frame Debugger</li>
+          <li>Burst + Job System</li>
+          <li>DOTS / ECS</li>
+          <li data-en="GC &amp; object pooling" data-vi="GC &amp; object pooling">GC &amp; object pooling</li>
+          <li data-en="Frame pacing &amp; thermal" data-vi="Frame pacing &amp; kiểm soát nhiệt">Frame pacing &amp; thermal</li>
+          <li>IL2CPP</li>
+        </ul>
+      </article>
+
+      <article class="dom tilt reveal">
+        <div class="dom__head"><span class="dom__ico">⇄</span><h3 data-en="Multiplayer &amp; netcode" data-vi="Multiplayer &amp; netcode">Multiplayer &amp; netcode</h3></div>
+        <ul class="dom__list">
+          <li data-en="Realtime state sync" data-vi="Đồng bộ trạng thái realtime">Realtime state sync</li>
+          <li data-en="Client / host architecture" data-vi="Kiến trúc client / host">Client / host architecture</li>
+          <li data-en="Latency handling" data-vi="Xử lý độ trễ">Latency handling</li>
+          <li data-en="Sessions &amp; matchmaking" data-vi="Phiên chơi &amp; ghép trận">Sessions &amp; matchmaking</li>
+          <li data-en="Serialization &amp; bandwidth" data-vi="Serialization &amp; băng thông">Serialization &amp; bandwidth</li>
+        </ul>
+      </article>
+
+      <article class="dom tilt reveal">
+        <div class="dom__head"><span class="dom__ico">▲</span><h3 data-en="Build &amp; release" data-vi="Build &amp; phát hành">Build &amp; release</h3></div>
+        <ul class="dom__list">
+          <li data-en="Build size &amp; ASTC compression" data-vi="Dung lượng build &amp; nén ASTC">Build size &amp; ASTC compression</li>
+          <li data-en="Shader stripping" data-vi="Shader stripping">Shader stripping</li>
+          <li>Addressables</li>
+          <li data-en="iOS build, signing &amp; provisioning" data-vi="Build iOS, ký &amp; provisioning">iOS build, signing &amp; provisioning</li>
+          <li data-en="Android build &amp; keystore" data-vi="Build Android &amp; keystore">Android build &amp; keystore</li>
+          <li>App Store Connect · Play Console</li>
+        </ul>
+      </article>
+
+      <article class="dom tilt reveal">
+        <div class="dom__head"><span class="dom__ico">◎</span><h3 data-en="Data, LiveOps &amp; tooling" data-vi="Dữ liệu, LiveOps &amp; tooling">Data, LiveOps &amp; tooling</h3></div>
+        <ul class="dom__list">
+          <li>Firebase Analytics</li>
+          <li data-en="Event design &amp; funnels" data-vi="Thiết kế event &amp; funnel">Event design &amp; funnels</li>
+          <li data-en="Metrics → product decisions" data-vi="Số liệu → quyết định sản phẩm">Metrics → product decisions</li>
+          <li data-en="Remote config &amp; A/B" data-vi="Remote config &amp; A/B">Remote config &amp; A/B</li>
+          <li data-en="Ad mediation &amp; IAP" data-vi="Ad mediation &amp; IAP">Ad mediation &amp; IAP</li>
+          <li data-en="Editor tools, Python pipelines, CI" data-vi="Tool Editor, pipeline Python, CI">Editor tools, Python pipelines, CI</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────── DEMO ─────────────────────────── -->
+  <section class="section" id="demo">
+    <div class="section__head reveal">
+      <span class="tag">03</span>
+      <h2 data-en="Draw calls, live" data-vi="Draw call, chạy trực tiếp">Draw calls, live</h2>
+    </div>
+    <p class="section__lede reveal"
+       data-en="Instead of claiming I optimise rendering, here it is running in your browser. Real WebGL2, real instancing, real numbers — the draw-call counter reads the actual number of draw calls issued per frame. Drag the slider up, then flip to Instanced."
+       data-vi="Thay vì nói suông là mình tối ưu rendering, nó đang chạy ngay trong trình duyệt của bạn. WebGL2 thật, instancing thật, số liệu thật — bộ đếm draw call đọc đúng số lệnh vẽ phát ra mỗi frame. Kéo thanh trượt lên cao, rồi bật sang Instanced.">
+      Real WebGL2, real instancing, real numbers.
+    </p>
+
+    <div class="demo reveal">
+      <div class="demo__stage">
+        <canvas id="glDemo" aria-label="GPU instancing demo"></canvas>
+
+        <div class="demo__hud" id="glHud">
+          <div class="hud"><span class="hud__k" data-en="draw calls" data-vi="draw call">draw calls</span><span class="hud__v" id="hudDraws">—</span></div>
+          <div class="hud"><span class="hud__k">fps</span><span class="hud__v" id="hudFps">—</span></div>
+          <div class="hud"><span class="hud__k" data-en="frame" data-vi="frame">frame</span><span class="hud__v" id="hudMs">—</span></div>
+          <canvas class="hud__spark" id="hudSpark" width="360" height="60" aria-hidden="true"></canvas>
+        </div>
+
+        <div class="demo__fallback" id="glFallback" hidden>
+          <p data-en="This browser doesn't expose WebGL2, so the live demo can't run here."
+             data-vi="Trình duyệt này không hỗ trợ WebGL2 nên demo trực tiếp không chạy được.">
+            This browser doesn't expose WebGL2.
+          </p>
+        </div>
       </div>
 
-      <div class="skills__code reveal">
-        <div class="codebar"><i></i><i></i><i></i><span class="mono">Wasd.cs</span></div>
-<pre class="code mono"><code><span class="k">public sealed class</span> <span class="t">Wasd</span> : <span class="t">MonoBehaviour</span>
-{
-    <span class="k">public</span> <span class="t">string</span>   Role      =&gt; <span class="s">"Unity Mobile Game Dev"</span>;
-    
-    <span class="k">public</span> <span class="t">string</span>[] Platforms =&gt; <span class="k">new</span>[] { <span class="s">"iOS"</span>, <span class="s">"Android"</span> };
+      <div class="demo__panel">
+        <div class="seg" role="group" aria-label="Render mode">
+          <button class="seg__btn is-on" type="button" data-mode="naive">Naive</button>
+          <button class="seg__btn" type="button" data-mode="instanced">Instanced</button>
+        </div>
 
-    <span class="k">public</span> <span class="t">string</span>[] Obsessions =&gt; <span class="k">new</span>[]
-    {
-        <span class="s">"GPU instancing &amp; the render pipeline"</span>,
-        <span class="s">"Burst + Jobs, allocation-free loops"</span>,
-        <span class="s">"Custom HLSL / Shader Graph"</span>,
-        <span class="s">"Idle &amp; gacha economy systems"</span>,
-    };
+        <label class="ctrl">
+          <span class="ctrl__label"><span data-en="quads" data-vi="số quad">quads</span> <b id="countLabel" class="mono">2,000</b></span>
+          <input type="range" id="countRange" min="100" max="20000" step="100" value="2000" />
+        </label>
 
-    <span class="k">void</span> <span class="f">Update</span>()
-    {
-        <span class="k">while</span> (Coffee &gt; <span class="n">0f</span>) <span class="f">Ship</span>();
-    }
-}</code></pre>
+        <p class="demo__note"
+           data-en="Naive issues one draw call per quad — the way a scene looks when every object carries its own material. Instanced uploads the per-quad data once and issues exactly one call, which is what a material property block plus GPU instancing buys you in Unity."
+           data-vi="Naive phát một draw call cho mỗi quad — đúng như khi mỗi object mang material riêng. Instanced đẩy dữ liệu từng quad lên một lần rồi phát đúng một lệnh vẽ, chính là thứ mà material property block cộng GPU instancing mang lại trong Unity.">
+          Naive issues one draw call per quad; instanced issues exactly one.
+        </p>
+
+        <button class="btn btn--ghost demo__reset" type="button" id="glPause">Pause</button>
       </div>
     </div>
   </section>
@@ -194,7 +292,7 @@
   <!-- ─────────────────────────── WORK ─────────────────────────── -->
   <section class="section" id="work">
     <div class="section__head reveal">
-      <span class="tag">03</span>
+      <span class="tag">04</span>
       <h2 data-en="Selected work" data-vi="Dự án tiêu biểu">Selected work</h2>
     </div>
 
@@ -249,7 +347,7 @@
   <!-- ─────────────────────────── PLAYBOOK ─────────────────────────── -->
   <section class="section" id="playbook">
     <div class="section__head reveal">
-      <span class="tag">04</span>
+      <span class="tag">05</span>
       <h2 data-en="Performance playbook" data-vi="Sổ tay hiệu năng">Performance playbook</h2>
     </div>
     <p class="section__lede reveal"
@@ -290,14 +388,14 @@
   <!-- ─────────────────────────── CONTACT ─────────────────────────── -->
   <section class="section section--contact" id="contact">
     <div class="contact reveal">
-      <span class="tag">05</span>
+      <span class="tag">06</span>
       <h2 data-en="Let's build something that runs fast." data-vi="Cùng làm một thứ chạy thật mượt.">Let's build something that runs fast.</h2>
       <p data-en="Open to game projects, performance work, and Unity tooling. The fastest way to reach me is email."
          data-vi="Sẵn sàng nhận dự án game, công việc tối ưu hiệu năng và làm tool Unity. Cách nhanh nhất để liên hệ là email.">
         Open to game projects, performance work, and Unity tooling.
       </p>
       <div class="contact__cta">
-        <a class="btn btn--primary magnetic" href="mailto:dongnm@wasdmobile.com">dongnm@wasdmobile.com</a>
+        <a class="btn btn--primary magnetic" href="mailto:mindongun123@gmail.com">mindongun123@gmail.com</a>
         <a class="btn magnetic" href="https://github.com/tkctwasd" target="_blank" rel="noopener">GitHub ↗</a>
       </div>
     </div>
@@ -311,5 +409,6 @@
 </footer>
 
 <script src="app.js"></script>
+<script src="instancing.js"></script>
 </body>
 </html>

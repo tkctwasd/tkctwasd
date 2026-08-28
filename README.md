@@ -61,13 +61,15 @@ dành cho những thứ ít hào nhoáng nhất: **draw call, batching, memory v
 Mục tiêu rất đơn giản — **game phải giữ được 60 FPS trên chiếc điện thoại rẻ nhất mà người
 chơi thực sự đang dùng.**
 
-**Mình đang tập trung vào:**
+**Mình làm qua toàn bộ vòng đời một game mobile:**
 
-- **Rendering & hiệu năng** — GPU instancing, SRP Batcher, giảm draw call, custom shader HLSL
-- **Burst + Jobs** — viết gameplay loop không phát sinh allocation, tránh GC spike giữa trận
-- **Hệ thống game** — idle / gacha, cân bằng kinh tế trong game, progression
-- **Tooling** — tool nội bộ cho Unity Editor, Python cho pipeline, Luau cho Roblox
-- **LiveOps** — Firebase Analytics + AppLovin MAX cho monetization và đo lường
+- **Gameplay** — physics & collider, Animator, particle/VFX, Canvas & UI đa độ phân giải
+- **Rendering** — GPU instancing, SRP Batcher, giảm draw call, custom shader HLSL
+- **Hiệu năng & DOTS** — Burst + Jobs, DOTS/ECS, pooling, không allocation giữa trận, frame pacing
+- **Multiplayer** — đồng bộ trạng thái realtime, kiến trúc client/host, xử lý độ trễ
+- **Build & phát hành** — dung lượng build, ASTC, Addressables, build iOS lẫn Android, lên cả hai store
+- **Dữ liệu & LiveOps** — Firebase Analytics, đọc chỉ số để cải thiện sản phẩm, remote config, ad mediation
+- **Tooling** — tool cho Unity Editor, Python cho pipeline, Luau cho Roblox
 
 **Đang làm:** một game *keyboard* dùng GPU-instanced rendering, một game *brainrot idle/gacha*,
 và một *endless runner*.
@@ -92,7 +94,7 @@ và một *endless runner*.
 
 ---
 
-## 🛠️ Stack
+## 🛠️ What I cover
 
 <div align="center">
 
@@ -102,43 +104,21 @@ và một *endless runner*.
 
 </div>
 
-<table>
-<tr>
-<td valign="top" width="33%">
+Six domains, all of them touched in shipped work rather than tutorials. The point isn't the list —
+it's that a decision in one row is usually a decision in another.
 
-**Rendering**
+| Domain | |
+| :-- | :-- |
+| **Gameplay** | Physics & colliders · Animator & state machines · Particles / VFX · Canvas & responsive UI · Input System · Scene & prefab architecture |
+| **Rendering & shaders** | URP · GPU instancing · SRP Batcher · HLSL & Shader Graph · Material property blocks · Overdraw & transparency budget |
+| **Performance & DOTS** | Profiler & Frame Debugger · Burst + Job System · DOTS / ECS · GC & object pooling · Frame pacing & thermal · IL2CPP |
+| **Multiplayer & netcode** | Realtime state sync · Client / host architecture · Latency handling · Sessions & matchmaking · Serialization & bandwidth |
+| **Build & release** | Build size & ASTC · Shader stripping · Addressables · iOS build, signing & provisioning · Android build & keystore · App Store Connect · Play Console |
+| **Data, LiveOps & tooling** | Firebase Analytics · Event design & funnels · Metrics → product decisions · Remote config & A/B · Ad mediation & IAP · Editor tools, Python pipelines, CI |
 
-![URP](https://img.shields.io/badge/URP-000?style=flat-square&logo=unity&logoColor=fff)
-![HLSL](https://img.shields.io/badge/HLSL-8b5cf6?style=flat-square)
-![Shader Graph](https://img.shields.io/badge/Shader_Graph-6366f1?style=flat-square)
-![GPU Instancing](https://img.shields.io/badge/GPU_Instancing-a78bfa?style=flat-square)
-![SRP Batcher](https://img.shields.io/badge/SRP_Batcher-4c1d95?style=flat-square)
-
-</td>
-<td valign="top" width="33%">
-
-**Performance**
-
-![IL2CPP](https://img.shields.io/badge/IL2CPP-3178c6?style=flat-square)
-![Burst](https://img.shields.io/badge/Burst-ff6c37?style=flat-square)
-![Jobs](https://img.shields.io/badge/Job_System-f97316?style=flat-square)
-![Addressables](https://img.shields.io/badge/Addressables-0ea5e9?style=flat-square)
-![Profiler](https://img.shields.io/badge/Unity_Profiler-16a34a?style=flat-square)
-
-</td>
-<td valign="top" width="33%">
-
-**Live game**
-
-![Firebase](https://img.shields.io/badge/Firebase-ffca28?style=flat-square&logo=firebase&logoColor=000)
-![AppLovin MAX](https://img.shields.io/badge/AppLovin_MAX-ec4899?style=flat-square)
-![DOTween](https://img.shields.io/badge/DOTween-4caf50?style=flat-square)
-![Addressables CDN](https://img.shields.io/badge/Remote_Assets-0284c7?style=flat-square)
-![CI](https://img.shields.io/badge/GitHub_Actions-2088ff?style=flat-square&logo=githubactions&logoColor=fff)
-
-</td>
-</tr>
-</table>
+> 🔴 **Rather see it than read it?** The portfolio has a
+> [live WebGL2 instancing demo](https://tkctwasd.github.io/tkctwasd/#demo) — drag the count up,
+> flip from *naive* to *instanced*, and watch the real draw-call counter drop from thousands to one.
 
 ---
 

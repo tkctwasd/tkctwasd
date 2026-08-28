@@ -157,10 +157,6 @@
         if (!e.isIntersecting) return;
         e.target.classList.add("is-in");
         $$("[data-count]", e.target).forEach(countUp);
-        $$(".bar", e.target).forEach((bar) => {
-          bar.style.setProperty("--w", `${bar.dataset.level}%`);
-          bar.classList.add("is-on");
-        });
         obs.unobserve(e.target);
       });
     }, { threshold: 0.14, rootMargin: "0px 0px -8% 0px" });
@@ -168,7 +164,6 @@
   } else {
     $$(".reveal").forEach((el) => el.classList.add("is-in"));
     $$("[data-count]").forEach(countUp);
-    $$(".bar").forEach((b) => { b.style.setProperty("--w", `${b.dataset.level}%`); b.classList.add("is-on"); });
   }
 
   /* ── pointer flourishes ─────────────────────────────── */
