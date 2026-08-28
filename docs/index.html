@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Nguyen Minh Dong — Unity Mobile Game Developer</title>
+<meta name="description" content="Unity mobile game developer from Vietnam. Rendering, GPU instancing, Burst + Jobs, and 60 FPS on low-end phones." />
+<meta name="author" content="Nguyen Minh Dong" />
+<meta name="color-scheme" content="dark light" />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Nguyen Minh Dong — Unity Mobile Game Developer" />
+<meta property="og:description" content="Rendering, GPU instancing, Burst + Jobs, and 60 FPS on low-end phones." />
+<meta property="og:url" content="https://tkctwasd.github.io/tkctwasd/" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%236366f1'/%3E%3Ctext x='16' y='22' font-family='sans-serif' font-size='15' font-weight='bold' fill='white' text-anchor='middle'%3EW%3C/text%3E%3C/svg%3E" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+<div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+<div class="grain" aria-hidden="true"></div>
+
+<header class="nav" id="nav">
+  <a class="nav__brand" href="#top">
+    <span class="nav__mark">W</span>
+    <span class="nav__name">WASD</span>
+  </a>
+
+  <nav class="nav__links" aria-label="Sections">
+    <a href="#about"    data-en="About"     data-vi="Giới thiệu">About</a>
+    <a href="#skills"   data-en="Skills"    data-vi="Kỹ năng">Skills</a>
+    <a href="#work"     data-en="Work"      data-vi="Dự án">Work</a>
+    <a href="#playbook" data-en="Playbook"  data-vi="Kinh nghiệm">Playbook</a>
+    <a href="#contact"  data-en="Contact"   data-vi="Liên hệ">Contact</a>
+  </nav>
+
+  <div class="nav__actions">
+    <button class="pill" id="langToggle" type="button" aria-label="Switch language">
+      <span id="langLabel">VI</span>
+    </button>
+    <button class="pill pill--icon" id="themeToggle" type="button" aria-label="Switch theme">
+      <svg class="ico ico--sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><g stroke-linecap="round"><path d="M12 2.6v2.4M12 19v2.4M4.2 12H1.8M22.2 12h-2.4M6.3 6.3 4.6 4.6M19.4 19.4l-1.7-1.7M17.7 6.3l1.7-1.7M4.6 19.4l1.7-1.7"/></g></svg>
+      <svg class="ico ico--moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.6A8.6 8.6 0 0 1 9.4 3.5a8.6 8.6 0 1 0 11.1 11.1Z"/></svg>
+    </button>
+    <button class="nav__burger" id="burger" type="button" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ─────────────────────────── HERO ─────────────────────────── -->
+  <section class="hero">
+    <canvas class="hero__canvas" id="constellation" aria-hidden="true"></canvas>
+    <div class="hero__aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+
+    <div class="hero__inner">
+      <p class="eyebrow reveal" data-en="Unity Mobile Game Developer — Vietnam" data-vi="Lập trình viên game mobile Unity — Việt Nam">Unity Mobile Game Developer — Vietnam</p>
+
+      <h1 class="hero__title reveal">
+        Nguyen Minh <span class="grad">Dong</span>
+      </h1>
+
+      <p class="hero__type reveal">
+        <span class="mono" id="typed"></span><span class="caret" aria-hidden="true"></span>
+      </p>
+
+      <p class="hero__lede reveal"
+         data-en="I make mobile games in Unity and care most about the part nobody posts screenshots of: draw calls, memory, and frame pacing. The goal is always the same — 60 FPS on the cheapest phone a player actually owns."
+         data-vi="Mình làm game mobile bằng Unity, và quan tâm nhất tới phần không ai chụp màn hình khoe: draw call, bộ nhớ và frame pacing. Mục tiêu luôn không đổi — 60 FPS trên chiếc điện thoại rẻ nhất mà người chơi thực sự đang dùng.">
+        I make mobile games in Unity and care most about the part nobody posts screenshots of: draw calls, memory, and frame pacing. The goal is always the same — 60 FPS on the cheapest phone a player actually owns.
+      </p>
+
+      <div class="hero__cta reveal">
+        <a class="btn btn--primary magnetic" href="#work" data-en="See the work" data-vi="Xem dự án">See the work</a>
+        <a class="btn magnetic" href="mailto:dongnm@wasdmobile.com" data-en="Get in touch" data-vi="Liên hệ">Get in touch</a>
+        <a class="btn btn--ghost magnetic" href="https://github.com/tkctwasd" target="_blank" rel="noopener">GitHub ↗</a>
+      </div>
+
+      <dl class="stats reveal">
+        <div class="stat"><dt data-count="60" data-suffix=" FPS">0</dt><dd data-en="Target on low-end" data-vi="Mục tiêu máy yếu">Target on low-end</dd></div>
+        <div class="stat"><dt data-count="3" data-suffix="">0</dt><dd data-en="Games in the oven" data-vi="Game đang phát triển">Games in the oven</dd></div>
+        <div class="stat"><dt data-count="2" data-suffix="">0</dt><dd data-en="Platforms shipped to" data-vi="Nền tảng phát hành">Platforms shipped to</dd></div>
+        <div class="stat"><dt data-count="1" data-suffix=" draw call">0</dt><dd data-en="For a whole key grid" data-vi="Cho toàn bộ lưới phím">For a whole key grid</dd></div>
+      </dl>
+    </div>
+
+    <a class="scroll-hint" href="#about" aria-label="Scroll down"><span></span></a>
+  </section>
+
+  <!-- ─────────────────────────── ABOUT ─────────────────────────── -->
+  <section class="section" id="about">
+    <div class="section__head reveal">
+      <span class="tag">01</span>
+      <h2 data-en="About" data-vi="Giới thiệu">About</h2>
+    </div>
+
+    <div class="about">
+      <div class="about__text reveal">
+        <p data-en="I'm Dong, a Unity developer based in Vietnam building mobile games. I've worked across the whole surface of the engine — gameplay, rendering, networking, release, analytics — but the part I keep coming back to sits between the gameplay loop and the GPU: getting a scene to draw in as few calls as possible, keeping the loop allocation-free, and writing the shaders that make a cheap scene look expensive."
+           data-vi="Mình là Đông, lập trình viên Unity ở Việt Nam, làm game mobile. Mình đã làm qua gần như toàn bộ bề mặt của engine — gameplay, rendering, networking, phát hành, phân tích số liệu — nhưng phần mình luôn quay lại nằm giữa vòng lặp gameplay và GPU: đưa một scene về ít draw call nhất có thể, giữ vòng lặp không phát sinh allocation, và viết shader để một scene rẻ tiền trông đắt tiền.">
+          I'm Dong, a Unity developer based in Vietnam building mobile games.
+        </p>
+        <p data-en="That range matters more than it sounds. Knowing the render pipeline is what tells you an Animator is the wrong tool before you've built the whole screen around it. Having shipped to both stores is what tells you a texture decision is really a download-size decision. The breadth is what makes the depth usable."
+           data-vi="Độ phủ đó quan trọng hơn vẻ ngoài của nó. Hiểu render pipeline là thứ cho bạn biết Animator là công cụ sai trước khi bạn dựng cả màn hình quanh nó. Từng phát hành lên cả hai store là thứ cho bạn biết một quyết định về texture thật ra là quyết định về dung lượng tải. Chiều rộng chính là thứ làm cho chiều sâu dùng được.">
+          The breadth is what makes the depth usable.
+        </p>
+
+        <div class="chips">
+          <span class="chip">Unity</span><span class="chip">C#</span><span class="chip">HLSL</span>
+          <span class="chip">URP</span><span class="chip">Burst</span><span class="chip">Jobs</span>
+          <span class="chip">IL2CPP</span><span class="chip">Python</span><span class="chip">Luau</span>
+        </div>
+      </div>
+
+      <div class="about__cards">
+        <article class="card tilt reveal">
+          <div class="card__ico">◈</div>
+          <h3 data-en="Rendering" data-vi="Rendering">Rendering</h3>
+          <p data-en="GPU instancing, SRP Batcher, material property blocks, custom HLSL and Shader Graph."
+             data-vi="GPU instancing, SRP Batcher, material property block, HLSL tự viết và Shader Graph.">GPU instancing, SRP Batcher, custom HLSL.</p>
+        </article>
+        <article class="card tilt reveal">
+          <div class="card__ico">⚡</div>
+          <h3 data-en="Performance" data-vi="Hiệu năng">Performance</h3>
+          <p data-en="Burst + Jobs, pooling, zero mid-run allocations, frame pacing and thermal headroom."
+             data-vi="Burst + Jobs, pooling, không allocation giữa trận, frame pacing và kiểm soát nhiệt.">Burst + Jobs, pooling, frame pacing.</p>
+        </article>
+        <article class="card tilt reveal">
+          <div class="card__ico">◎</div>
+          <h3 data-en="Game systems" data-vi="Hệ thống game">Game systems</h3>
+          <p data-en="Idle and gacha loops, offline progression, economy curves that survive contact with players."
+             data-vi="Vòng lặp idle và gacha, tiến trình offline, đường cong kinh tế trụ được khi người chơi vào.">Idle and gacha loops, economy curves.</p>
+        </article>
+        <article class="card tilt reveal">
+          <div class="card__ico">⌘</div>
+          <h3 data-en="Tooling &amp; LiveOps" data-vi="Tooling &amp; LiveOps">Tooling &amp; LiveOps</h3>
+          <p data-en="Editor tools, Python build pipelines, Firebase Analytics and AppLovin MAX in production."
+             data-vi="Tool cho Editor, pipeline build bằng Python, Firebase Analytics và AppLovin MAX chạy thật.">Editor tools, pipelines, analytics.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────── SKILLS ─────────────────────────── -->
+  <section class="section" id="skills">
+    <div class="section__head reveal">
+      <span class="tag">02</span>
+      <h2 data-en="Skills" data-vi="Kỹ năng">Skills</h2>
+    </div>
+
+    <div class="skills">
+      <div class="skills__bars reveal">
+        <div class="bar" data-level="92"><span class="bar__name">Unity / C#</span><span class="bar__val">92</span><i></i></div>
+        <div class="bar" data-level="85"><span class="bar__name">Rendering &amp; HLSL</span><span class="bar__val">85</span><i></i></div>
+        <div class="bar" data-level="88"><span class="bar__name">Performance &amp; profiling</span><span class="bar__val">88</span><i></i></div>
+        <div class="bar" data-level="78"><span class="bar__name">Burst / Jobs / DOTS</span><span class="bar__val">78</span><i></i></div>
+        <div class="bar" data-level="72"><span class="bar__name">Python tooling</span><span class="bar__val">72</span><i></i></div>
+        <div class="bar" data-level="68"><span class="bar__name">Luau / Roblox</span><span class="bar__val">68</span><i></i></div>
+      </div>
+
+      <div class="skills__code reveal">
+        <div class="codebar"><i></i><i></i><i></i><span class="mono">Wasd.cs</span></div>
+<pre class="code mono"><code><span class="k">public sealed class</span> <span class="t">Wasd</span> : <span class="t">MonoBehaviour</span>
+{
+    <span class="k">public</span> <span class="t">string</span>   Role      =&gt; <span class="s">"Unity Mobile Game Dev"</span>;
+    
+    <span class="k">public</span> <span class="t">string</span>[] Platforms =&gt; <span class="k">new</span>[] { <span class="s">"iOS"</span>, <span class="s">"Android"</span> };
+
+    <span class="k">public</span> <span class="t">string</span>[] Obsessions =&gt; <span class="k">new</span>[]
+    {
+        <span class="s">"GPU instancing &amp; the render pipeline"</span>,
+        <span class="s">"Burst + Jobs, allocation-free loops"</span>,
+        <span class="s">"Custom HLSL / Shader Graph"</span>,
+        <span class="s">"Idle &amp; gacha economy systems"</span>,
+    };
+
+    <span class="k">void</span> <span class="f">Update</span>()
+    {
+        <span class="k">while</span> (Coffee &gt; <span class="n">0f</span>) <span class="f">Ship</span>();
+    }
+}</code></pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────── WORK ─────────────────────────── -->
+  <section class="section" id="work">
+    <div class="section__head reveal">
+      <span class="tag">03</span>
+      <h2 data-en="Selected work" data-vi="Dự án tiêu biểu">Selected work</h2>
+    </div>
+
+    <div class="work">
+      <article class="proj tilt reveal">
+        <div class="proj__top">
+          <span class="proj__idx mono">01</span>
+          <span class="badge badge--live" data-en="In development" data-vi="Đang phát triển">In development</span>
+        </div>
+        <h3 data-en="Keyboard Game" data-vi="Keyboard Game">Keyboard Game</h3>
+        <p data-en="A rhythm-and-typing game where the entire key grid renders in a single GPU-instanced draw call. Per-key state lives in a compute-friendly buffer instead of hundreds of GameObjects, so input latency stays flat as the grid grows."
+           data-vi="Game gõ phím theo nhịp, toàn bộ lưới phím được vẽ trong đúng một draw call nhờ GPU instancing. Trạng thái từng phím nằm trong buffer thay vì hàng trăm GameObject, nên độ trễ input không tăng khi lưới lớn hơn.">
+          Entire key grid in one GPU-instanced draw call.
+        </p>
+        <ul class="proj__tags"><li>GPU Instancing</li><li>HLSL</li><li>URP</li><li>Input System</li></ul>
+      </article>
+
+      <article class="proj tilt reveal">
+        <div class="proj__top">
+          <span class="proj__idx mono">02</span>
+          <span class="badge badge--live" data-en="In development" data-vi="Đang phát triển">In development</span>
+        </div>
+        <h3 data-en="Brainrot Idle" data-vi="Brainrot Idle">Brainrot Idle</h3>
+        <p data-en="An idle + gacha loop with an offline-progress simulator that replays hours of production in milliseconds, and an economy curve tuned so the first session and the hundredth both feel worth opening."
+           data-vi="Vòng lặp idle + gacha với bộ mô phỏng tiến trình offline, tua lại hàng giờ sản xuất trong vài mili giây, cùng đường cong kinh tế được cân sao cho phiên đầu tiên và phiên thứ một trăm đều đáng mở lên chơi.">
+          Idle + gacha with an offline-progress simulator.
+        </p>
+        <ul class="proj__tags"><li>Idle economy</li><li>Gacha</li><li>Firebase</li><li>AppLovin MAX</li></ul>
+      </article>
+
+      <article class="proj tilt reveal">
+        <div class="proj__top">
+          <span class="proj__idx mono">03</span>
+          <span class="badge" data-en="Prototype" data-vi="Nguyên mẫu">Prototype</span>
+        </div>
+        <h3 data-en="Endless Runner" data-vi="Endless Runner">Endless Runner</h3>
+        <p data-en="Procedural chunk streaming with everything pooled up front. Nothing allocates mid-run, so the GC never gets a reason to interrupt a run the player was about to win."
+           data-vi="Chunk sinh ngẫu nhiên được stream liên tục, mọi thứ đều pooling từ đầu. Không allocation giữa trận, nên GC không có lý do để cắt ngang một lượt chơi mà người chơi sắp thắng.">
+          Procedural streaming, zero mid-run allocations.
+        </p>
+        <ul class="proj__tags"><li>Object pooling</li><li>Burst</li><li>Jobs</li><li>Addressables</li></ul>
+      </article>
+    </div>
+
+    <p class="work__note reveal"
+       data-en="Repositories open up as each project reaches a shippable state. Everything already public is on my GitHub."
+       data-vi="Repo sẽ được mở dần khi từng dự án đủ điều kiện phát hành. Những gì đã public đều nằm trên GitHub của mình.">
+      Repositories open up as each project reaches a shippable state.
+    </p>
+  </section>
+
+  <!-- ─────────────────────────── PLAYBOOK ─────────────────────────── -->
+  <section class="section" id="playbook">
+    <div class="section__head reveal">
+      <span class="tag">04</span>
+      <h2 data-en="Performance playbook" data-vi="Sổ tay hiệu năng">Performance playbook</h2>
+    </div>
+    <p class="section__lede reveal"
+       data-en="What I reach for before anyone in the room says the word “optimize”."
+       data-vi="Những thứ mình dùng trước khi có ai đó trong phòng nói tới từ “tối ưu”.">
+      What I reach for before anyone says “optimize”.
+    </p>
+
+    <div class="play">
+      <details class="play__row reveal" open>
+        <summary><span class="play__sym" data-en="Draw calls in the hundreds" data-vi="Draw call lên tới hàng trăm">Draw calls in the hundreds</span><span class="play__cause mono">materials</span></summary>
+        <p data-en="Usually per-object materials and dynamic batching quietly giving up. Move to material property blocks and GPU instancing, and keep the SRP Batcher's cache warm by not touching shader variants at runtime."
+           data-vi="Thường do mỗi object một material và dynamic batching âm thầm bỏ cuộc. Chuyển sang material property block và GPU instancing, đồng thời giữ cache của SRP Batcher ổn định bằng cách không đụng vào shader variant lúc runtime.">…</p>
+      </details>
+      <details class="play__row reveal">
+        <summary><span class="play__sym" data-en="Frame spikes every few seconds" data-vi="Giật khung hình vài giây một lần">Frame spikes every few seconds</span><span class="play__cause mono">GC</span></summary>
+        <p data-en="Almost always per-frame allocations feeding the garbage collector. Hot loops move to Burst + Jobs, collections become NativeArray, and anything spawned during play gets pooled."
+           data-vi="Gần như luôn là allocation mỗi frame nuôi garbage collector. Vòng lặp nóng chuyển sang Burst + Jobs, collection đổi thành NativeArray, và mọi thứ sinh ra lúc chơi đều được pooling.">…</p>
+      </details>
+      <details class="play__row reveal">
+        <summary><span class="play__sym" data-en="Long cold start" data-vi="Khởi động lần đầu chậm">Long cold start</span><span class="play__cause mono">boot</span></summary>
+        <p data-en="The first scene is carrying everything. Addressables plus async warm-up, and every non-critical system gets deferred past the first rendered frame."
+           data-vi="Scene đầu tiên đang gánh tất cả. Dùng Addressables cộng warm-up bất đồng bộ, và mọi hệ thống không thiết yếu đều được hoãn lại sau frame đầu tiên.">…</p>
+      </details>
+      <details class="play__row reveal">
+        <summary><span class="play__sym" data-en="Thermal throttling after ten minutes" data-vi="Máy nóng và tụt xung sau mười phút">Thermal throttling after ten minutes</span><span class="play__cause mono">overdraw</span></summary>
+        <p data-en="Overdraw and rendering at full rate for no reason. Cut transparent layers, cap the frame rate deliberately, and scale resolution down on GPUs that can't afford it."
+           data-vi="Overdraw và render hết công suất một cách vô ích. Cắt bớt lớp trong suốt, giới hạn frame rate có chủ đích, và giảm độ phân giải trên những GPU không kham nổi.">…</p>
+      </details>
+      <details class="play__row reveal">
+        <summary><span class="play__sym" data-en="Build size out of control" data-vi="Dung lượng build phình to">Build size out of control</span><span class="play__cause mono">assets</span></summary>
+        <p data-en="Uncompressed textures and shader variants nobody uses. ASTC per platform, aggressive shader stripping, and a dependency audit that usually finds one asset dragging in a hundred more."
+           data-vi="Texture chưa nén và shader variant không ai dùng. Nén ASTC theo nền tảng, strip shader mạnh tay, và rà soát dependency — thường sẽ tìm ra một asset kéo theo cả trăm asset khác.">…</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────── CONTACT ─────────────────────────── -->
+  <section class="section section--contact" id="contact">
+    <div class="contact reveal">
+      <span class="tag">05</span>
+      <h2 data-en="Let's build something that runs fast." data-vi="Cùng làm một thứ chạy thật mượt.">Let's build something that runs fast.</h2>
+      <p data-en="Open to game projects, performance work, and Unity tooling. The fastest way to reach me is email."
+         data-vi="Sẵn sàng nhận dự án game, công việc tối ưu hiệu năng và làm tool Unity. Cách nhanh nhất để liên hệ là email.">
+        Open to game projects, performance work, and Unity tooling.
+      </p>
+      <div class="contact__cta">
+        <a class="btn btn--primary magnetic" href="mailto:dongnm@wasdmobile.com">dongnm@wasdmobile.com</a>
+        <a class="btn magnetic" href="https://github.com/tkctwasd" target="_blank" rel="noopener">GitHub ↗</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <span class="mono">© <span id="year"></span> Nguyen Minh Dong</span>
+  <span class="mono foot__quote">Optimize first, cry later.</span>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
