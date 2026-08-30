@@ -16,7 +16,7 @@
   <rect x="0" y="0" width="470" height="3" rx="1.5" fill="url(#accent)"/>
   <rect x=".5" y=".5" width="469" height="213" rx="13.5" fill="none" stroke="rgba(15,12,40,.12)"/>
   <text x="22" y="34" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="12" font-weight="600" letter-spacing="2" fill="#78758f">@tkctwasd</text>
-  <text x="448" y="34" text-anchor="end" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="10.5" fill="#9b98ad">2026-08-29</text>
+  <text x="448" y="34" text-anchor="end" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="10.5" fill="#9b98ad">2026-08-30</text>
   <line x1="22" y1="48" x2="448" y2="48" stroke="rgba(15,12,40,.12)"/>
   <g opacity="0">
     <animate attributeName="opacity" from="0" to="1" begin="0.1s" dur=".55s" fill="freeze"/>
@@ -40,7 +40,7 @@
   </g>
   <g opacity="0">
     <animate attributeName="opacity" from="0" to="1" begin="0.38s" dur=".55s" fill="freeze"/>
-    <text x="172" y="172" font-family="'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="26" font-weight="700" fill="url(#accent)">1</text>
+    <text x="172" y="172" font-family="'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="26" font-weight="700" fill="url(#accent)">0</text>
     <text x="172" y="191" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="10" letter-spacing="1.1" fill="#78758f">CURRENT STREAK</text>
   </g>
   <g opacity="0">
