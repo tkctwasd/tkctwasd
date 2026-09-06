@@ -10,13 +10,59 @@
     <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse">
       <path d="M28 0H0V28" fill="none" stroke="#6d28d9" stroke-opacity="0.07" stroke-width="1"/>
     </pattern>
+    <clipPath id="barClip"><rect x="22" y="68" width="0" height="13" rx="6.5">
+      <animate attributeName="width" from="0" to="426" begin=".15s" dur="1s" fill="freeze" calcMode="spline" keySplines=".2 .8 .3 1"/>
+    </rect></clipPath>
   </defs>
   <rect width="470" height="214" rx="14" fill="url(#bg)"/>
   <rect width="470" height="214" rx="14" fill="url(#grid)"/>
   <rect x="0" y="0" width="470" height="3" rx="1.5" fill="url(#accent)"/>
   <rect x=".5" y=".5" width="469" height="213" rx="13.5" fill="none" stroke="rgba(15,12,40,.12)"/>
   <text x="22" y="34" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="12" font-weight="600" letter-spacing="2" fill="#78758f">LANGUAGES</text>
-  <text x="448" y="34" text-anchor="end" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="10.5" fill="#9b98ad">2026-09-05</text>
+  <text x="448" y="34" text-anchor="end" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="10.5" fill="#9b98ad">2026-09-06</text>
   <line x1="22" y1="48" x2="448" y2="48" stroke="rgba(15,12,40,.12)"/>
-  <text x="22" y="98" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="12" fill="#9b98ad">No public repositories yet.</text>
+  <g clip-path="url(#barClip)">
+  <rect x="22.0" y="68" width="385.3" height="13" fill="#3178c6"/>
+  <rect x="407.3" y="68" width="31.0" height="13" fill="#f34b7d"/>
+  <rect x="438.3" y="68" width="7.4" height="13" fill="#555555"/>
+  <rect x="445.7" y="68" width="2.0" height="13" fill="#f1e05a"/>
+  <rect x="447.7" y="68" width="2.0" height="13" fill="#e34c26"/>
+  <rect x="449.7" y="68" width="2.0" height="13" fill="#663399"/>
+  </g>
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="0.35s" dur=".5s" fill="freeze"/>
+    <circle cx="27" cy="108" r="5" fill="#3178c6"/>
+    <text x="40" y="112" font-family="'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="12.5" fill="#14122a">TypeScript</text>
+    <text x="218" y="112" text-anchor="end" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="11.5" fill="#78758f">90.4%</text>
+  </g>
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="0.42s" dur=".5s" fill="freeze"/>
+    <circle cx="251" cy="108" r="5" fill="#f34b7d"/>
+    <text x="264" y="112" font-family="'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="12.5" fill="#14122a">C++</text>
+    <text x="442" y="112" text-anchor="end" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="11.5" fill="#78758f">7.3%</text>
+  </g>
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="0.49s" dur=".5s" fill="freeze"/>
+    <circle cx="27" cy="135" r="5" fill="#555555"/>
+    <text x="40" y="139" font-family="'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="12.5" fill="#14122a">C</text>
+    <text x="218" y="139" text-anchor="end" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="11.5" fill="#78758f">1.7%</text>
+  </g>
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="0.56s" dur=".5s" fill="freeze"/>
+    <circle cx="251" cy="135" r="5" fill="#f1e05a"/>
+    <text x="264" y="139" font-family="'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="12.5" fill="#14122a">JavaScript</text>
+    <text x="442" y="139" text-anchor="end" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="11.5" fill="#78758f">0.3%</text>
+  </g>
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="0.63s" dur=".5s" fill="freeze"/>
+    <circle cx="27" cy="162" r="5" fill="#e34c26"/>
+    <text x="40" y="166" font-family="'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="12.5" fill="#14122a">HTML</text>
+    <text x="218" y="166" text-anchor="end" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="11.5" fill="#78758f">0.2%</text>
+  </g>
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="0.70s" dur=".5s" fill="freeze"/>
+    <circle cx="251" cy="162" r="5" fill="#663399"/>
+    <text x="264" y="166" font-family="'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="12.5" fill="#14122a">CSS</text>
+    <text x="442" y="166" text-anchor="end" font-family="ui-monospace,'SF Mono',Menlo,Consolas,monospace" font-size="11.5" fill="#78758f">0.1%</text>
+  </g>
 </svg>
